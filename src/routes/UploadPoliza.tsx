@@ -72,7 +72,7 @@ export default function PolizaControl() {
     };
 
     const handleDelete = (id: number) => {
-        // Lógica para borrar la póliza
+        // Logica para borrar la póliza
         // Ejemplo:
         // fetch(`/api/polizas/${id}`, { method: 'DELETE' })
         //     .then(() => setPolizas(polizas.filter(poliza => poliza.id !== id)));
