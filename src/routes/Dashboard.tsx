@@ -18,6 +18,8 @@ export default function Dashboard() {
 
     return (
         <div>
+            <title >Inicio</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <div className="Welcome d-flex justify-content-between">
                 <div className="texts d-flex align-items-center">
                     <img src={logosetues} alt="logo ues" className="logo" />
@@ -28,7 +30,7 @@ export default function Dashboard() {
                     <h1>Bienvenid@, {"usuario"}</h1>
 
                     <div className="links">
-                        <a className="text-decoration-none text-white pr-5" href="/profile">Perfil</a>
+                        <a className="text-decoration-none text-white pr-5" href="/protected/profile">Perfil</a>
                         <button className="btn-logout text-decoration-none pr-4" onClick={handleLogout}>Cerrar Sesion</button>
                     </div>
                 </div>
@@ -40,7 +42,6 @@ export default function Dashboard() {
                     <li>
                         <a href="#">Servicios</a>
                         <ul>
-                            <li><a className="sublista" href="/protected/upload">Subida de polizas</a></li>
                             <li><a className="sublista" href="/protected/poliza-control">Control de polizas</a></li>
                             <li><a className="sublista" href="/registerEmployee">Control de profesores</a></li>
                         </ul>

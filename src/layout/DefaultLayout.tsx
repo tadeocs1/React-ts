@@ -7,18 +7,8 @@ interface DefaultLayoutProps {
 export default function DefaultLayout({ children }: DefaultLayoutProps) {
     return (
         <>
-            <header>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/signup">Signup</Link>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        <title>Sutues</title>
             <main>{children}</main>
         </>
     );

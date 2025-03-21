@@ -1,13 +1,14 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Login from './routes/Login.js';
-import Signup from './routes/Signup.js';
-import Dashboard from './routes/Dashboard.js';
-import ProtectedRoute from './routes/ProtectedRoutes.js';
-import UploadPoliza from './routes/UploadPoliza.js';
-import PolizaControl from './routes/PolizaControl.js';
-import { AuthProvider } from './auth/AuthProvider.js';
+import Login from './routes/Login.jsx';
+import Signup from './routes/Signup.jsx';
+import Dashboard from './routes/Dashboard.jsx';
+import ProtectedRoute from './routes/ProtectedRoutes.jsx';
+import UploadPoliza from './routes/UploadPoliza.jsx';
+import PolizaControl from './routes/PolizaControl.jsx';
+import Profile from './routes/Profile.jsx';
+import { AuthProvider } from './auth/AuthProvider.jsx';
 import './css/bootstrap.css';
 import './css/styles.css';
 
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
       path:"poliza-control",
       element: <PolizaControl />,
+      },
+      {
+        path: "profile",
+        element: <Profile/>,
       }
     ]
   },

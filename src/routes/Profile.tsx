@@ -30,7 +30,9 @@ export default function Profile() {
         navigate('/');
     };
 
-    const handleUpdate = async (event) => {
+    interface UpdateEvent extends React.FormEvent<HTMLFormElement> {}
+
+    const handleUpdate = async (event: UpdateEvent): Promise<void> => {
         event.preventDefault();
 
         try {
@@ -64,7 +66,7 @@ export default function Profile() {
                 <div className="texts t2 d-flex align-items-end flex-column pr-5">
                     <h1>Bienvenid@, {"usuario"}</h1>
                     <div className="links">
-                        <a className="text-decoration-none text-white pr-5" href="/profile">Perfil</a>
+                        <a className="text-decoration-none text-white pr-5" href="/protected/profile">Perfil</a>
                         <button className="btn-logout text-decoration-none pr-4" onClick={handleLogout}>Cerrar Sesion</button>
                     </div>
                 </div>
@@ -75,7 +77,6 @@ export default function Profile() {
                     <li>
                         <a href="#">Servicios</a>
                         <ul>
-                            <li><a className="sublista" href="/protected/upload">Subida de polizas</a></li>
                             <li><a className="sublista" href="/protected/poliza-control">Control de polizas</a></li>
                             <li><a className="sublista" href="/registerEmployee">Control de profesores</a></li>
                         </ul>
